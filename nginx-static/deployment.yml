@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nginx-static
+  name: nginx-static-deployment
   namespace: playground
 spec:
   template:

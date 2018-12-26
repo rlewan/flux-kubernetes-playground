@@ -18,9 +18,9 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-      - name: nginx-static
-        image: rlewan/nginx-static:6d1849765ee89d9f4c4eee2e8281acb3d0a86922
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 80
-          protocol: TCP
+        - name: nginx-static
+          image: rlewan/nginx-static:6d1849765ee89d9f4c4eee2e8281acb3d0a86922
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP

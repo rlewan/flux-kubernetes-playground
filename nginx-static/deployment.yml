@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: nginx-static-deployment
   namespace: playground
+  labels:
+    app: nginx-static
 spec:
   replicas: 3
   selector:

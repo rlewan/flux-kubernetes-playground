@@ -5,6 +5,7 @@ metadata:
   name: nginx-static-deployment
   namespace: playground
 spec:
+  replicas: 3
   template:
     metadata:
       labels:
@@ -13,13 +14,6 @@ spec:
       automountServiceAccountToken: false
       containers:
       - name: nginx-static
-        resources:
-          requests:
-            cpu: 0.5
-            memory: "512Mi"
-          limits:
-            cpu: 1
-            memory: "640Mi"
         image: rlewan/nginx-static:latest
         imagePullPolicy: IfNotPresent
         ports:

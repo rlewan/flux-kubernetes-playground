@@ -1,11 +1,14 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-static-deployment
   namespace: playground
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-static
   template:
     metadata:
       labels:

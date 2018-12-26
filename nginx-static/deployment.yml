@@ -22,13 +22,3 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10    # delay after container start and before first liveness probe
-          failureThreshold: 10    # times before giving up (before restart pod)
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 80

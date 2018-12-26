@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-static
+  namespace: playground
+  labels:
+    app: nginx-static
+spec:
+  type: NodePort
+  ports:
+    - name: nginx-static
+      port: 80
+      nodePort: 30000
+      protocol: TCP
+  selector:
+    app: nginx-static

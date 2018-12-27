@@ -5,16 +5,16 @@ metadata:
   name: nginx-static-deployment
   namespace: playground
   labels:
-    app: nginx-static
+    name: nginx-static
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx-static
+      name: nginx-static
   template:
     metadata:
       labels:
-        app: nginx-static
+        name: nginx-static
     spec:
       automountServiceAccountToken: false
       containers:

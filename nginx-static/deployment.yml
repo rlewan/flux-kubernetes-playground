@@ -6,6 +6,8 @@ metadata:
   namespace: playground
   labels:
     name: nginx-static
+  annotations:
+    flux.weave.works/automated: true
 spec:
   replicas: 3
   selector:
